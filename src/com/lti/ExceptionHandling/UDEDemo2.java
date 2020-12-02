@@ -17,7 +17,7 @@ class RangePrint{
 public class UDEDemo2 {
     public static void main(String[] args) {
         try{
-            int a=-1,b=23;
+            int a=1,b=23;
             RangePrint rangePrint = new RangePrint();
             rangePrint.printRange(a,b);
         }
