@@ -34,6 +34,7 @@ public class TreeSet {
         int c=0;
         for(Object i:s){
             ret[c++]= Integer.parseInt(i.toString());
+            //Object should be converted to String to be able to parseInt
         }
         return ret;
 
