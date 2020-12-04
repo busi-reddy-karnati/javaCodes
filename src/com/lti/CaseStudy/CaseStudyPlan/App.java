@@ -19,7 +19,6 @@ public class App {
     }
     public void scenario2(){
         List<Student> students = new ArrayList<Student>();
-        //Student[] students = new Student[4];
         students.add(new Student(1,"Sachin2","1973-04-24"));
         students.add(new Student(2,"Sehwag2","1978-10-20"));
         students.add(new Student(3,"Ganguly2","1972-07-08"));
