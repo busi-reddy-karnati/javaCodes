@@ -3,6 +3,8 @@ package com.lti.CaseStudy.CaseStudyPlan;
 import com.sun.org.apache.xpath.internal.SourceTree;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -16,13 +18,14 @@ public class App {
         Student s4 = new Student(4,"Laxman","1974-11-01");
     }
     public void scenario2(){
-        Student[] students = new Student[4];
-        students[0] = new Student(1,"Sachin2","1973-04-24");
-        students[1] = new Student(2,"Sehwag2","1978-10-20");
-        students[2] = new Student(3,"Ganguly2","1972-07-08");
-        students[3] = new Student(4,"Laxman2","1974-11-01");
-        for(int i=0;i<4;i++){
-            new Info().display(students[i]);
+        List<Student> students = new ArrayList<Student>();
+        //Student[] students = new Student[4];
+        students.add(new Student(1,"Sachin2","1973-04-24"));
+        students.add(new Student(2,"Sehwag2","1978-10-20"));
+        students.add(new Student(3,"Ganguly2","1972-07-08"));
+        students.add(new Student(4,"Laxman2","1974-11-01"));
+        for(Student student : students){
+            new Info().display(student);
         }
     }
     public void scenario3(){
