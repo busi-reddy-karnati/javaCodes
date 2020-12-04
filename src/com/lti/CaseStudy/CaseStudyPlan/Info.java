@@ -1,5 +1,7 @@
 package com.lti.CaseStudy.CaseStudyPlan;
 
+import com.lti.CaseStudy.CaseStudy2.Enroll;
+
 /**
  * Created by busis on 2020-12-04.
  */
@@ -16,5 +18,10 @@ public class Info {
         System.out.println("Course Fees: "+course.getFees());
         System.out.println("Course Duration: "+course.getDuration());
 
+    }
+    public void display(Enroll enroll){
+        System.out.println("Course Name: "+enroll.getCourse().getName());
+        System.out.println("Student Name: "+enroll.getStudent().getName());
+        System.out.println("Enrollment Date: "+enroll.getEnrollmentDate());
     }
 }
