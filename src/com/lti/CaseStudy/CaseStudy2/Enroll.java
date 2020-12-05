@@ -4,6 +4,7 @@ import com.lti.CaseStudy.CaseStudyPlan.Course;
 import com.lti.CaseStudy.CaseStudyPlan.Student;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 /**
  * Created by busis on 2020-12-04.
@@ -11,7 +12,13 @@ import java.time.LocalDate;
 public class Enroll {
     private Student student;
     private Course course;
-    private LocalDate enrollmentDate;
+    private Date enrollmentDate;
+
+    public Enroll(Student student, Course course, Date enrollmentDate) {
+        this.student = student;
+        this.course = course;
+        this.enrollmentDate = enrollmentDate;
+    }
 
     public Student getStudent() {
         return student;
@@ -29,11 +36,11 @@ public class Enroll {
         this.course = course;
     }
 
-    public LocalDate getEnrollmentDate() {
+    public Date getEnrollmentDate() {
         return enrollmentDate;
     }
 
-    public void setEnrollmentDate(LocalDate enrollmentDate) {
+    public void setEnrollmentDate(Date enrollmentDate) {
         this.enrollmentDate = enrollmentDate;
     }
 }

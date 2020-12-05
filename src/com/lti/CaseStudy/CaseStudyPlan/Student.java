@@ -8,9 +8,9 @@ import java.util.Date;
 public class Student {
     private int id;
     private String name;
-    private String dateOfBirth;
+    private Date dateOfBirth;
 
-    Student(int id,String name, String dateOfBirth){
+    public Student(int id, String name, Date dateOfBirth){
         this.id=id;
         this.name=name;
         this.dateOfBirth=dateOfBirth;
@@ -32,11 +32,11 @@ public class Student {
         this.name = name;
     }
 
-    public String getDateOfBirth() {
+    public Date getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
+    public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 }
