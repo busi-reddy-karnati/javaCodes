@@ -2,12 +2,21 @@
   <dictionary name="busis">
     <words>
       <w>arraysdemo</w>
+      <w>comparision</w>
       <w>cust</w>
+      <w>datatype</w>
       <w>dravid</w>
+      <w>dups</w>
+      <w>dupsarr</w>
+      <w>ganguly</w>
+      <w>hashe</w>
       <w>laxman</w>
+      <w>mgmt</w>
+      <w>relyear</w>
       <w>sachin</w>
       <w>sehwag</w>
       <w>train's</w>
+      <w>vals</w>
       <w>xfac</w>
     </words>
   </dictionary>
