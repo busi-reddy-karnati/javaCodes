@@ -24,7 +24,12 @@ public class JDBCDemo1 {
             Scanner sc = new Scanner(System.in);
             int a = sc.nextInt();
             String s = sc.next();
-            int res = stmnt.executeUpdate("Insert into test values ("+a+","+s+");");
+
+            PreparedStatement preparedStatement = con.prepareStatement("Insert into test values (?,?)");
+            preparedStatement.setInt(1,a);
+            preparedStatement.setString(2,s);
+            preparedStatement.executeUpdate();
+            //int res = stmnt.executeUpdate("Insert into test(num,name) values ("+a+","+s+");");
             //THis is one way to insert into the table
             //But this is complex, so we will have to use preparedStatements to pass parameters
             ResultSet rs = stmnt.executeQuery("SELECT * from test");
