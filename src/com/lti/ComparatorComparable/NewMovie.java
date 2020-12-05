@@ -54,9 +54,25 @@ class Comparison2{
                return o1.getName().compareToIgnoreCase(o2.getName());
             }//Swap if o1 is greater than o2
         });
-
+        Collections.sort(movies, new NameCompare());
+        Collections.reverse(movies);
         for(Movie movie:movies){
             System.out.println(movie.getRelyear()+" "+movie.getName());
         }
     }
 }
+class NameCompare implements Comparator<Movie>{
+
+    @Override
+    public int compare(Movie o1, Movie o2) {
+        return o1.getName().compareToIgnoreCase(o2.getName());
+    }
+}
+
+class YearCompare implements Comparator<Movie>{
+    @Override
+    public int compare(Movie o1, Movie o2) {
+        return o1.getRelyear()-o2.getRelyear();
+    }
+}
+

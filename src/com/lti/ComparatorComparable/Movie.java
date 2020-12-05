@@ -20,7 +20,8 @@ public class Movie implements Comparable<Movie>{
     public int compareTo(Movie o) {
         //Since in the class definition,we wrote that the comparator with
         //this is another movie, we need to do it with o
-        return this.getRelyear() - o.getRelyear();
+        return this.getRelyear() - o.getRelyear();//Only one comparision
+        //Wither year or name not both. IF you want both, use comparator
         //Swap in bubble sort if return <0;
     }
 
