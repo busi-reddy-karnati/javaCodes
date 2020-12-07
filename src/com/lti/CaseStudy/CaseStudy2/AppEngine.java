@@ -1,10 +1,10 @@
 package com.lti.CaseStudy.CaseStudy2;
-import java.sql.*;
-import java.sql.Date;
-import java.util.*;
-
 import com.lti.CaseStudy.CaseStudyPlan.Course;
 import com.lti.CaseStudy.CaseStudyPlan.Student;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by busis on 2020-12-04.
