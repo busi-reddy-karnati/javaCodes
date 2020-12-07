@@ -135,7 +135,6 @@ class Implementation implements Application{
         Scanner sc = new Scanner(System.in);
         String courseName;
         int courseId, duration, fees;
-        //idnamedurationfees
         System.out.println("Give ID, Name, Duration, Fees for the course");
         courseId = sc.nextInt();
         courseName = sc.next();
