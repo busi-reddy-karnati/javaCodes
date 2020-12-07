@@ -75,9 +75,11 @@ public class Menu {
         Scanner scanner=new Scanner(System.in);
         option=scanner.nextInt();
         if(option==1){
+            System.out.println("Give Product ID, Quantity");
             int productId=scanner.nextInt();
             int quantity=scanner.nextInt();
             new Sales().addSales(productId,quantity);
+            System.out.println("Sales Added");
         }
         else{
             System.out.println("Invalid option. Try again!");

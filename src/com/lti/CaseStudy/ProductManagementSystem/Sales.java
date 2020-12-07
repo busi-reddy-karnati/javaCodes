@@ -19,11 +19,32 @@ public class Sales {
         }
         try {
             ResultSet rs = stmnt.executeQuery("SELECT IFNULL(MAX(billno),0) from sales");
-            billNo=rs.getInt(1)+1;
-            rs = stmnt.executeQuery("SELECT Qty from sales where ProId="+productId+";");
+            if(rs.next())
+            billNo=rs.getInt(1);
+            else
+            billNo=0;
+            billNo+=1;
+            //billNo works fine
+            preparedStatement = con.prepareStatement("SELECT Qty from product where prodId=?");
+            preparedStatement.setInt(1,productId);
+            rs = preparedStatement.executeQuery();
+            if(rs.next())
             qtypresent = rs.getInt(1);
-            rs = stmnt.executeQuery("SELECT price from sales where ProId="+productId+";");
-            int price=rs.getInt(1);
+            else {
+                System.out.println("That productId doesn't exist in the table");
+                return;
+            }
+            preparedStatement=con.prepareStatement("SELECT price from product where ProdId=?");
+            preparedStatement.setInt(1,productId);
+            rs = preparedStatement.executeQuery();
+            int price;
+            if(rs.next())
+            price=rs.getInt(1);
+            else{
+                System.out.println("Check the product Id. and try again");
+                return;
+            }
+
             if(qtypresent<quantity){
                 System.out.println("Quantity Number Error");
                 return;
@@ -38,10 +59,11 @@ public class Sales {
             preparedStatement.setInt(3,quantity);
             preparedStatement.setInt(4,quantity*price);
             preparedStatement.executeUpdate();
-
+            System.out.println("Inserted into Sales Table");
 
 
         } catch (SQLException e) {
+            System.out.println();
             e.printStackTrace();
         }
 
