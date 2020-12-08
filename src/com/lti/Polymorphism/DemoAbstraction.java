@@ -30,5 +30,35 @@ public class DemoAbstraction {
         //For bank and applyFD cannot be accessed like this coz it isnt overridden method
         Dog dog = new Dog();
         //dog.whoAmI();
+
+        XExtend.print();
+        System.out.println(X.s);
+        System.out.println(InFace.x);
     }
+}
+class X{
+    static int s=10;
+    static void print(){
+        System.out.println("Viola");
+    }
+
+}
+abstract class AbsClass{
+    void myMethod(){
+        System.out.println("Test Abstract");
+    }
+}
+class AbsImplementation extends AbsClass{
+    void myMethod(){
+        super.myMethod();
+        System.out.println("Test Abstract Impl");
+    }
+}
+class XExtend extends X{
+    static void print(){
+        System.out.println("Viola Sub Class");
+    }
+}
+interface InFace{
+    int x=100;
 }
