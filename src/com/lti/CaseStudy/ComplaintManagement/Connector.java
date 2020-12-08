@@ -1,4 +1,4 @@
-package com.lti.CaseStudy.ComplaintMangementSystem;
+package com.lti.CaseStudy.ComplaintManagement;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
