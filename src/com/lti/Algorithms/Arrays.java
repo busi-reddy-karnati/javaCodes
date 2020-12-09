@@ -1,7 +1,6 @@
 package com.lti.Algorithms;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by busis on 2020-12-09.
@@ -39,7 +38,18 @@ public class Arrays {
         stringBuffer1.getChars(0,stringBuffer.length(),ans,0);
         return ans;
     }
+    public String[] sortByAge(String []input){
+        Collections.sort(java.util.Arrays.asList(input),new compareTwoStrings());
+        return input;
+    }
+
+
     public static void main(String[] args) {
+        String input11[]={"Ben-12","hun-15","Gen-14"};
+        Arrays arrays=new Arrays();
+        input11=arrays.sortByAge(input11);
+        for(String s:input11)
+            System.out.println(s);
         int num[] = new int[10];
         //We don't give the size here
 
@@ -66,7 +76,6 @@ public class Arrays {
             arr2[i]=s.get(i);
         }
 
-        Arrays arrays = new Arrays();
         int[] input={12,34,35,16,19,27};
         int[] result=arrays.swapSort(input);
         for(int r:result)
@@ -74,5 +83,28 @@ public class Arrays {
 
         String inl="AlPha";
         System.out.println(arrays.moveVowels(inl));
+    }
+}
+class compareTwoStrings implements Comparator<String>{
+
+
+    @Override
+    public int compare(String o1, String o2) {
+        StringTokenizer stringTokenizer=new StringTokenizer(o1,"-");
+        StringTokenizer stringTokenizer1=new StringTokenizer(o2,"-");
+        int n1 = 0;
+        int n2 = 0;
+        String buffer;
+        if(stringTokenizer.hasMoreTokens())
+            buffer=stringTokenizer.nextToken();
+        if(stringTokenizer.hasMoreTokens())
+            n1=Integer.parseInt(stringTokenizer.nextToken());
+        if(stringTokenizer1.hasMoreTokens())
+            buffer=stringTokenizer1.nextToken();
+        if(stringTokenizer1.hasMoreTokens())
+            n2=Integer.parseInt(stringTokenizer1.nextToken());
+
+
+        return (n1-n2);
     }
 }

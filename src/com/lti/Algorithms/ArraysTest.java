@@ -17,6 +17,14 @@ public class ArraysTest {
         assertArrayEquals(input,output);
     }
     @Test
+    public void testSortByAge() throws Exception{
+        String[] input={"iam-22","bro-21","bro2-19","bro4-10"};
+        Arrays arrays=new Arrays();
+        String[] output=arrays.sortByAge(input);
+        String[] expected={"bro4-10","bro2-19","bro-21","iam-22"};
+        assertArrayEquals(expected,output);
+    }
+    @Test
     public void testSwapSort1() throws Exception{
         int[] input;
         int[] output;
