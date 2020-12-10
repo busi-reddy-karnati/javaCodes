@@ -5,17 +5,25 @@ package com.lti.Algorithms.Codility.Iterations;
  */
 public class BinaryGapIterations {
     public static void main(String[] args) {
-        int n=19;
+        int ans;
+        ans=new BinaryGapIterations().solution(19);
+        System.out.println(ans);
+    }
+    public int solution(int n){
+        /*
+        Another Logic could be to find the indices of 1 and then find the gap
+         */
         boolean encouteredOne=false;
         int c=0;
         int ans=0;
+        int bit=0;
         while (n>0){
-            int i=n%2;
+            bit =n%2;
             n=n>>1;
-            if(i==0&&encouteredOne){
+            if(bit==0&&encouteredOne){
                 c+=1;
             }
-            if(i==1){
+            if(bit==1){
                 encouteredOne=true;
                 if(c>0)
                 {
@@ -24,6 +32,6 @@ public class BinaryGapIterations {
                 }
             }
         }
-        System.out.println(ans);
+        return ans;
     }
 }
