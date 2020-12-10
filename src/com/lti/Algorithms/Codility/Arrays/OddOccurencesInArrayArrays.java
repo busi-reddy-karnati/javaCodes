@@ -13,6 +13,8 @@ public class OddOccurencesInArrayArrays {
         System.out.println(new OddOccurencesInArrayArrays().solution(input));
     }
     public int solution(int[] A){
+        //A bit wise XOR can be used to solve this.
+        //That gives constant space and linear time complexity
         Map<Integer,Integer> map=new HashMap<Integer, Integer>();
         for(int i:A){
             if(map.containsKey(i)){

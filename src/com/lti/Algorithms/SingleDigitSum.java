@@ -5,7 +5,23 @@ package com.lti.Algorithms;
  */
 public class SingleDigitSum {
     public static void main(String[] args) {
-        System.out.println(digitSum(6745));
+        //Single digit sum
+        System.out.println(dS(6745));
+    }
+    //Another way
+    public static int dS(int n){
+        int b=0;
+        int a=n;
+        int i;
+        while (a!=0){
+            i=a%10;
+            b+=i;
+            a/=10;
+
+        }
+        if(b>9)
+            b=dS(b);
+        return b;
     }
     public static int digitSum(int n){
         int ans=0;
