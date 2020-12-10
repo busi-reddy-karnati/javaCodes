@@ -5,6 +5,7 @@ package com.lti.Algorithms.Codility.Arrays;
  */
 public class ArrayRotationArrays {
     public static void main(String[] args) {
+        
         int a[]={3,8,9,7,6};
         int k=3;
 
