@@ -1,8 +1,8 @@
-package com.lti.Algorithms.Codility;
+package com.lti.Algorithms;
 
 import org.junit.Test;
 
-import static com.lti.Algorithms.Codility.MultiDigitArraySum.*;
+import static com.lti.Algorithms.MultiDigitArraySum.*;
 import static org.junit.Assert.assertEquals;
 
 public class MultiDigitArraySumTest {
