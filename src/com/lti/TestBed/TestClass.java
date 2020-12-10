@@ -10,6 +10,13 @@ import java.util.Date;
  */
 public class TestClass {
     public static void main(String[] args) {
+        int n=19;
+        while (n>0){
+            System.out.println(n%2);
+            n=n>>1;
+        }
+    }
+    public static void main1(String[] args) {
         System.out.println(differenceInDays("07/29/2010","07/26/2010"));
     }
     public static long differenceInDays(String s1,String s2){
