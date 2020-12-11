@@ -6,6 +6,8 @@ package com.lti.Algorithms;
 public class TwoStringsAnagram {
     public static void main(String[] args) {
         System.out.println(solution("abc","cde"));
+        System.out.println(solution("apple","appollo"));
+        System.out.println(solution("bankok","backup"));
     }
     public static int solution(String s1,String s2){
         int ans=0;
@@ -16,9 +18,7 @@ public class TwoStringsAnagram {
         for(int i=0;i<s2.length();i++)
             secondStringChars[s2.charAt(i)-'a']+=1;
         for(int i=0;i<26;i++){
-            int minFreq=Math.min(firstStringChars[i],secondStringChars[i]);
-            ans+=(firstStringChars[i]-minFreq);
-            ans+=(secondStringChars[i]-minFreq);
+            ans+=Math.abs(firstStringChars[i]-secondStringChars[i]);
         }
         return ans;
     }
