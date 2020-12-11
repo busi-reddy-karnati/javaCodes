@@ -20,8 +20,6 @@ public class MapQuest {
         for(String s: ans.keySet()){
             System.out.println(s+" "+ans.get(s));
         }
-
-
     }
     Map<String,Integer> getMaxAvg(Map<String,Integer> engFB, Map<String,Integer> matFB){
         Map<String,Integer> ans=new HashMap<String, Integer>();
