@@ -18,10 +18,6 @@ public class GenomicRangeQuery {
         int[] ans=new int[queries];
         int strLen=s.length();
         int[][] freq=new int[strLen+1][4];
-        freq[0][0]=0;
-        freq[0][1]=0;
-        freq[0][2]=0;
-        freq[0][3]=0;
         Map<Character,Integer> map=new HashMap<Character, Integer>();
         map.put('A',0);
         map.put('C',1);
