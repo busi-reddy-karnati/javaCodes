@@ -23,13 +23,7 @@ public class MaxCounters {
                 maxCount=maxBuffer;
             }
             else{
-                if(ans[index]<maxCount){
-                    ans[index]=maxCount+1;
-
-                }
-                else{
-                    ans[index]+=1;
-                }
+                ans[index]=ans[index]<maxCount?maxCount+1:ans[index]+1;
                 maxBuffer=Math.max(maxBuffer,ans[index]);
             }
         }
