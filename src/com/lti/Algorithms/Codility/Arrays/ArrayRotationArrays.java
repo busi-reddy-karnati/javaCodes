@@ -1,8 +1,6 @@
 package com.lti.Algorithms.Codility.Arrays;
 
-/**
- * Created by busis on 2020-12-09.
- */
+
 public class ArrayRotationArrays {
     public static void main(String[] args) {
         /*
