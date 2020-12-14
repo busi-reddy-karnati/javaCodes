@@ -6,7 +6,7 @@ package com.lti.Algorithms.Codility.Iterations;
 public class BinaryGapIterations {
     public static void main(String[] args) {
         int ans;
-        ans=new BinaryGapIterations().solution(19);
+        ans=new BinaryGapIterations().solution(32);
         System.out.println(ans);
     }
     public int solution(int n){

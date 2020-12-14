@@ -27,7 +27,10 @@ public class ArrayRotationArrays {
     }
     public int[] solution(int[] a, int k){
         int n=a.length;
+
         int ans[] = new int[n];
+        if(n==0)
+            return ans;
         k=k%n;
         int startIndex=n-k;
         int index=0;

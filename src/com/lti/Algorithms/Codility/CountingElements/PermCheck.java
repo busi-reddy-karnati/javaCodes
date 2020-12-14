@@ -12,6 +12,8 @@ public class PermCheck {
     }
     public int solution(int[] a){
         //Arrays is a class for all the methods involving arrays
+        //We can do in O(n) time by using extra space. A set for example
+        //Keep a perfect sum
         Arrays.sort(a);
         for(int i=0;i<a.length;i++){
             if(a[i]!=(i+1))
