@@ -14,6 +14,7 @@ public class Brackets {
 
 class Solution{
     public int solution(String s){
+        //We can use LinkedList also. It has all the operations that a stack has
         Stack<Character> stack=new Stack<Character>();
         for(int i=0;i<s.length();i++){
             char c=s.charAt(i);
