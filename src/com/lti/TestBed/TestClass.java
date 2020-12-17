@@ -10,6 +10,12 @@ import java.util.Date;
  */
 public class TestClass {
     public static void main(String[] args) {
+        int num=-1%3;
+        if(num<0)
+            num=3+num;
+        System.out.println(num);
+    }
+    public static void main2(String[] args) {
         int n=19;
         while (n>0){
             System.out.println(n%2);
